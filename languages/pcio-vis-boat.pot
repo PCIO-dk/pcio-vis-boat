@@ -1,0 +1,817 @@
+# Copyright (C) 2026 PCIO
+# This file is distributed under the GPL-2.0-or-later license.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PCIO VIS Boat 1.1\n"
+"Report-Msgid-Bugs-To: https://www.pcio.dk/\n"
+"POT-Creation-Date: 2026-10-02 18:57+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: pcio-vis-boat\n"
+"X-Generator: Poedit 3.9\n"
+
+#. Plugin Name of the plugin
+#: pcio-vis-boat.php includes/class-pcio-vis-boat-integration.php:490
+msgid "PCIO VIS Boat"
+msgstr ""
+
+#. Description of the plugin
+#: pcio-vis-boat.php
+msgid "Extends PCIO VIS Member Event with a boat club register: boats owned by a membership number with everyone on that number as crew, a member self-service boat profile, and Boat Register and Harbours admin pages. Fields: home harbour, boat name, type, model, build year, sail number and MMSI."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:35
+#: includes/class-pcio-vis-boat-harbours-admin.php:35
+#: includes/class-pcio-vis-boat-harbours-admin.php:54
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:36
+#: includes/class-pcio-vis-boat-harbours-admin.php:36
+#: includes/class-pcio-vis-boat-harbours-admin.php:55
+msgid "Access denied"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:85
+msgid "Boat Register"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:86
+msgid "+ New boat"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:87
+#: includes/class-pcio-vis-boat-integration.php:433
+#: includes/class-pcio-vis-boat-profile.php:499
+#: includes/class-pcio-vis-boat-signup.php:349
+#: includes/class-pcio-vis-boat-signup.php:424 templates/signup.php:59
+msgid "Boat name"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:88
+#: includes/class-pcio-vis-boat-harbours-map.php:35
+#: includes/class-pcio-vis-boat-integration.php:224
+#: includes/class-pcio-vis-boat-integration.php:434
+#: includes/class-pcio-vis-boat-integration.php:516
+#: includes/class-pcio-vis-boat-profile.php:62
+msgid "Type"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:89
+#: includes/class-pcio-vis-boat-integration.php:225
+#: includes/class-pcio-vis-boat-integration.php:435
+msgid "Model"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:90
+#: includes/class-pcio-vis-boat-integration.php:226
+#: includes/class-pcio-vis-boat-profile.php:507
+#: includes/class-pcio-vis-boat-signup.php:432 templates/signup.php:67
+msgid "Home harbour"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:91
+#: includes/class-pcio-vis-boat-integration.php:227
+#: includes/class-pcio-vis-boat-profile.php:548
+#: includes/class-pcio-vis-boat-signup.php:473 templates/signup.php:102
+msgid "Build year"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:92
+#: includes/class-pcio-vis-boat-integration.php:228
+#: includes/class-pcio-vis-boat-profile.php:557
+#: includes/class-pcio-vis-boat-signup.php:482 templates/signup.php:111
+msgid "Sail number"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:93
+#: includes/class-pcio-vis-boat-integration.php:229
+#: includes/class-pcio-vis-boat-integration.php:438
+#: includes/class-pcio-vis-boat-profile.php:565
+#: includes/class-pcio-vis-boat-signup.php:490 templates/signup.php:118
+msgid "MMSI"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:94
+#: includes/class-pcio-vis-boat-admin.php:114
+#: includes/class-pcio-vis-boat-integration.php:231
+#: includes/class-pcio-vis-boat-profile.php:133
+#: includes/class-pcio-vis-boat-profile.php:431
+#: includes/class-pcio-vis-boat-profile.php:443
+msgid "Crew"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:95
+msgid "Owner member #"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:96
+#: includes/class-pcio-vis-boat-integration.php:453
+#: includes/class-pcio-vis-boat-profile.php:480
+msgid "Add crew member"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:97
+msgid "Member #"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:98
+msgid "Subscription ID"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:99
+msgid "Optional. Link to a pcio-vis-products subscription row."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:100
+#: includes/class-pcio-vis-boat-integration.php:447
+msgid "Active"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:101
+msgid "Expires"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:102
+#: includes/class-pcio-vis-boat-integration.php:232
+msgid "Notes"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:103
+#: includes/class-pcio-vis-boat-harbours-admin.php:133
+msgid "Edit"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:104
+#: includes/class-pcio-vis-boat-harbours-admin.php:134
+msgid "Delete"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:105
+#: includes/class-pcio-vis-boat-integration.php:454
+#: includes/class-pcio-vis-boat-profile.php:397
+msgid "Remove"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:106
+#: includes/class-pcio-vis-boat-harbours-admin.php:135
+msgid "Save"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:107
+#: includes/class-pcio-vis-boat-harbours-admin.php:136
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:108
+msgid "Delete this boat and all its crew links?"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:109
+msgid "No boats registered yet."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:110
+msgid "No crew members linked."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:111
+#: includes/class-pcio-vis-boat-harbours-admin.php:143
+msgid "Save failed. Please try again."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:112
+msgid "Edit boat"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:113
+msgid "New boat"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:115
+msgid "This will also remove all crew links."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:116
+msgid "Yes"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:117
+msgid "No"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:118
+#: includes/class-pcio-vis-boat-harbours-admin.php:142
+msgid "Search…"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:119
+msgid "Add"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:120
+#: includes/class-pcio-vis-boat-harbours-admin.php:137
+#: includes/class-pcio-vis-boat-integration.php:245
+#: includes/class-pcio-vis-boat-profile.php:335
+#: includes/class-pcio-vis-boat-signup.php:390
+msgid "Close"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:121
+msgid "Member"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:122
+msgid "Filter"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:123
+#: includes/class-pcio-vis-boat-harbours-admin.php:144
+msgid "Showing"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:124
+#: includes/class-pcio-vis-boat-harbours-admin.php:145
+msgid "of"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:125
+#: includes/class-pcio-vis-boat-harbours-admin.php:131
+#: includes/class-pcio-vis-boat-harbours-map.php:69
+msgid "boats"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-admin.php:126
+#: includes/class-pcio-vis-boat-harbours-admin.php:141
+msgid "No matches."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:71
+#: includes/class-pcio-vis-boat-harbours-admin.php:72
+#: includes/class-pcio-vis-boat-harbours-admin.php:126
+#: includes/class-pcio-vis-boat-integration.php:355
+#: includes/class-pcio-vis-boat-integration.php:406
+#: templates/harbours-admin.php:21
+msgid "Harbours"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:127
+msgid "+ New harbour"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:128
+#: includes/class-pcio-vis-boat-profile.php:333
+#: includes/class-pcio-vis-boat-signup.php:388
+msgid "Harbour name"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:129
+msgid "Latitude"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:130
+msgid "Longitude"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:132
+#: includes/class-pcio-vis-boat-harbours-map.php:68
+msgid "boat"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:138
+msgid "Delete this harbour?"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:139
+msgid "Move the boats to another harbour first."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:140
+msgid "No harbours registered yet."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:146
+msgid "Please enter valid coordinates within the allowed range."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-admin.php:147
+msgid "Delete failed. Please try again."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:23
+msgid "[pcio_boat_harbours_map]"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:24
+msgid "Displays an interactive map with all registered harbours. Each harbour with at least one member shows a numbered badge with the count of members that have it as their home harbour. Clicking a marker opens a popup listing the members. Harbours with no members show a small anchor icon. Provided by the PCIO VIS Boat plugin."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:27
+#: includes/class-pcio-vis-boat-profile.php:72
+msgid "Required capability:"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:29
+msgid "— member names and numbers are only loaded for logged-in members; visitors without the capability see the map without member badges."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:34
+#: includes/class-pcio-vis-boat-integration.php:515
+#: includes/class-pcio-vis-boat-profile.php:61
+msgid "Attribute"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:36
+#: includes/class-pcio-vis-boat-integration.php:517
+#: includes/class-pcio-vis-boat-profile.php:63
+msgid "Default"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:37
+#: includes/class-pcio-vis-boat-integration.php:518
+#: includes/class-pcio-vis-boat-profile.php:64
+msgid "Description"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:42
+msgid "string"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:44
+msgid "CSS height of the map container."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:49
+#: includes/class-pcio-vis-boat-integration.php:538
+msgid "Examples"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:70
+msgid "No boats registered here yet."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-map.php:77
+msgid "Harbour map"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-rest.php:115
+#: includes/class-pcio-vis-boat-harbours-rest.php:147
+msgid "Harbour name is required."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-rest.php:118
+#: includes/class-pcio-vis-boat-harbours-rest.php:150
+msgid "Invalid coordinates."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-rest.php:122
+#: includes/class-pcio-vis-boat-harbours-rest.php:154
+msgid "A harbour named %s already exists."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-rest.php:129
+msgid "Could not save harbour."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-rest.php:143
+#: includes/class-pcio-vis-boat-harbours-rest.php:168
+msgid "Harbour not found."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-rest.php:177
+msgid "Harbour \"%s\" is used by %d boat. Move it to another harbour first."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-harbours-rest.php:178
+msgid "Harbour \"%s\" is used by %d boats. Move them to another harbour first."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:62
+msgid "Manage boat register"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:109
+msgid "Boat"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:223
+#: includes/class-pcio-vis-boat-profile.php:128
+#: includes/class-pcio-vis-boat-profile.php:494
+#: includes/class-pcio-vis-boat-signup.php:111
+#: includes/class-pcio-vis-boat-signup.php:419 templates/signup.php:54
+msgid "Boat details"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:230
+msgid "Membership number"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:293
+#: includes/class-pcio-vis-boat-integration.php:383 templates/admin.php:21
+msgid "Boats"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:296
+msgid "Browse and manage the boat register."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:358
+msgid "Manage harbour locations and home-harbour assignments."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:436
+msgid "Built"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:437
+msgid "Sail no."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:439
+msgid "Harbour"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:440
+msgid "Note"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:441
+msgid "Save boat"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:442
+msgid "Boat saved."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:443
+msgid "Save failed: "
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:445
+msgid "Crew on this boat"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:446
+msgid "No crew added yet."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:448
+msgid "Inactive"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:449
+msgid "Add a crew member"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:450
+#: includes/class-pcio-vis-boat-profile.php:458
+msgid "Name"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:451
+#: includes/class-pcio-vis-boat-profile.php:466 templates/signup.php:31
+msgid "Email"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:452
+#: includes/class-pcio-vis-boat-profile.php:474 templates/signup.php:39
+msgid "Phone"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:455
+#: includes/class-pcio-vis-boat-profile.php:398
+msgid "Remove this crew member from the boat?"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:456
+msgid "New crew share your membership and receive an email to set their password."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:457
+msgid "You can add crew once your membership is active."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:458
+#: includes/class-pcio-vis-boat-profile.php:399
+msgid "Crew member added."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:459
+#: includes/class-pcio-vis-boat-profile.php:400
+msgid "Crew member removed."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:460
+msgid "Could not update crew: "
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:502
+msgid "[pcio_boat_signup]"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:504
+msgid "Public sign-up form for new boat-club members. Collects personal details and boat information, then directs the applicant to a Stripe payment page for the club membership subscription. After successful payment the member and boat records are created automatically."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:507
+msgid "Requires:"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:508
+msgid "Plugins pcio-vis-tickets and pcio-vis-products must be active. A product with"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:510
+msgid "must exist in the shop and be set to active."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:523
+msgid "URL"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:525
+msgid "Page the visitor is sent to if they cancel at the Stripe payment step. Defaults to the site home page."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:530
+#: includes/class-pcio-vis-boat-profile.php:76
+msgid "Form fields collected"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:532
+msgid "Member details:"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:533
+msgid "Full name (required), email (required), phone, address."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:534
+msgid "Boat details:"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-integration.php:535
+msgid "Boat name (required), home harbour, type, model, build year, sail number, MMSI (9 digits)."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:49
+msgid "[pcio_boat_edit_profile]"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:51
+msgid "Renders the same inline member edit form as [pcio_me_edit_profile], extended with a Boat details fieldset and a Crew list the boat owner can edit. Requires the vis_member capability; shows a message if no member record is linked to the account."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:55
+msgid "Crew rules:"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:56
+msgid "crew shares the boat owner\\'s membership number (and therefore the same subscription); the owner cannot remove themselves; only people who are not already Vis members can be added — an existing WordPress user without the vis_member capability is accepted and promoted. Removing a crew member clears their membership number and revokes vis_member."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:67
+msgid "No attributes."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:83
+msgid "Example"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:95
+#: includes/class-pcio-vis-boat-signup.php:62
+msgid "Boat name (required)"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:96
+#: includes/class-pcio-vis-boat-signup.php:63
+msgid "Home harbour with autocomplete + Add on map (optional)"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:97
+#: includes/class-pcio-vis-boat-signup.php:64
+msgid "Boat type, boat model, build year, sail number, MMSI (optional)"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:259
+#: includes/class-pcio-vis-boat-profile.php:349
+#: includes/class-pcio-vis-boat-signup.php:155
+msgid "Boat name is required."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:262
+#: includes/class-pcio-vis-boat-profile.php:350
+#: includes/class-pcio-vis-boat-signup.php:158
+#: includes/class-pcio-vis-boat-signup.php:399
+msgid "MMSI must be exactly 9 digits."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:265
+#: includes/class-pcio-vis-boat-profile.php:351
+#: includes/class-pcio-vis-boat-signup.php:161
+#: includes/class-pcio-vis-boat-signup.php:400
+msgid "Please enter a valid build year."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:271
+#: includes/class-pcio-vis-boat-signup.php:167
+msgid "Invalid harbour coordinates."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:331
+#: includes/class-pcio-vis-boat-profile.php:334
+#: includes/class-pcio-vis-boat-signup.php:386
+#: includes/class-pcio-vis-boat-signup.php:389
+msgid "Add harbour"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:332
+#: includes/class-pcio-vis-boat-signup.php:387
+msgid "Click the map to place the harbour."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:394
+msgid "Loading crew…"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:395
+msgid "No crew members yet."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:396
+msgid "You"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:401
+msgid "Working…"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:402
+#: includes/class-pcio-vis-boat-rest.php:408
+msgid "A name is required."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:403
+#: includes/class-pcio-vis-boat-rest.php:411
+msgid "A valid email address is required."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:404
+msgid "Could not complete the request. Please try again."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:434
+msgid "Save your boat details first. Crew can be added once the boat is registered."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:447
+msgid "Everyone on this boat shares your membership number and subscription. Crew members cannot remove themselves, and only people who are not yet Vis members can be added."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:522
+#: includes/class-pcio-vis-boat-signup.php:447
+msgid "Pick a harbour from the list — only the selection is saved. Free text alone is not stored."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:526
+#: includes/class-pcio-vis-boat-signup.php:451 templates/signup.php:80
+msgid "Not in list? Add on map"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:532
+#: includes/class-pcio-vis-boat-signup.php:457 templates/signup.php:86
+msgid "Boat type"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:535
+#: includes/class-pcio-vis-boat-signup.php:460 templates/signup.php:89
+msgid "e.g. Sailing Yacht"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:540
+#: includes/class-pcio-vis-boat-signup.php:465 templates/signup.php:94
+msgid "Boat model"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-profile.php:569
+#: includes/class-pcio-vis-boat-signup.php:494 templates/signup.php:122
+msgid "9 digits"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:183
+#: includes/class-pcio-vis-boat-rest.php:211
+#: includes/class-pcio-vis-boat-rest.php:220
+#: includes/class-pcio-vis-boat-rest.php:251
+#: includes/class-pcio-vis-boat-rest.php:375
+#: includes/class-pcio-vis-boat-rest.php:483
+msgid "Boat not found."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:193
+msgid "An owner member ID is required."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:200
+msgid "Could not create the boat. Please try again."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:242
+msgid "A member ID is required."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:246
+msgid "Member not found."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:257
+msgid "This boat has no owner membership number."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:265
+msgid "This member already belongs to another boat."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:346
+msgid "Could not save boat. Please try again."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:378
+msgid "Membership system unavailable."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:383
+msgid "Members not found."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:391
+msgid "You do not have ownership of this boat."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:397
+msgid "Your membership is not active, so crew cannot be added."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:421
+msgid "This person already belongs to your boat."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:427
+msgid "This person already belongs to another boat."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:436
+msgid "This person is already a Vis member and cannot be added as crew."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:451
+msgid "Could not create the crew member."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-rest.php:489
+msgid "You cannot remove yourself from your own boat."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-signup.php:79
+msgid "Registrant's boat name"
+msgstr ""
+
+#: includes/class-pcio-vis-boat-signup.php:94
+msgid "<strong>Backward-compat alias:</strong> the pcio-vis-boat plugin also registers %s as an alias that renders this same form. Existing pages using that shortcode continue to work unchanged."
+msgstr ""
+
+#: includes/class-pcio-vis-boat-signup.php:221
+msgid "Club membership"
+msgstr ""
+
+#: pcio-vis-boat.php:116
+msgid "Member Event – Boat requires these plugins to be active: %s."
+msgstr ""
+
+#: templates/admin.php:41 templates/harbours-admin.php:41
+msgid "Loading&hellip;"
+msgstr ""
+
+#: templates/signup.php:18
+msgid "Your details"
+msgstr ""
+
+#: templates/signup.php:23
+msgid "Full name"
+msgstr ""
+
+#: templates/signup.php:46
+msgid "Address"
+msgstr ""
+
+#: templates/signup.php:128
+msgid "* Required"
+msgstr ""
+
+#: templates/signup.php:133
+msgid "Continue to payment"
+msgstr ""

@@ -1,0 +1,90 @@
+/* ================================================================
+   PCIO VIS Boat â€” boat-admin.css
+   Only boat-specific extras on top of the core Vis list styles
+   (members.css). The table, dark page header, toolbar, filter row,
+   sort icons, loading spinner, empty state, modals, form fields,
+   buttons and toast all come from members.css scoped to #pcio-me-app.
+   ================================================================ */
+
+/* â”€â”€ Crew modal inner table â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* Not #me-table, so needs its own dark header and row styles.    */
+.me-crew-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 13.5px;
+}
+.me-crew-table thead tr {
+	background: linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #334155 100%);
+}
+.me-crew-table thead th {
+	padding: 10px 14px;
+	font-size: 11px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.7px;
+	color: #64748b;
+	border: none;
+	text-align: left;
+	white-space: nowrap;
+}
+.me-crew-table tbody tr {
+	border-bottom: 1px solid #f1f5f9;
+	transition: background 0.1s;
+}
+.me-crew-table tbody tr:last-child { border-bottom: none; }
+.me-crew-table tbody tr:hover { background: #eff6ff; }
+.me-crew-table tbody td {
+	padding: 10px 14px;
+	color: #334155;
+	border: none;
+	vertical-align: middle;
+}
+
+/* â”€â”€ Crew modal layout helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.me-crew-divider {
+	border: none;
+	border-top: 1px solid #e2e8f0;
+	margin: 20px 0;
+}
+.me-crew-add-title {
+	font-size: 13.5px;
+	font-weight: 700;
+	color: #0f172a;
+	margin: 0 0 14px;
+}
+
+/* â”€â”€ Muted/dash value in cells â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.mep-muted { color: #94a3b8; }
+
+
+/* ── Harbour autocomplete picker ───────────────────────────────── */
+.pcio-harbour-picker {
+position: relative;
+}
+.pcio-harbour-sugg {
+position: absolute;
+top: 100%;
+left: 0;
+right: 0;
+z-index: 200;
+background: #fff;
+border: 1px solid #cbd5e1;
+border-top: none;
+border-radius: 0 0 6px 6px;
+list-style: none;
+margin: 0;
+padding: 0;
+max-height: 220px;
+overflow-y: auto;
+box-shadow: 0 4px 8px rgba(0,0,0,.10);
+display: none;
+}
+.pcio-harbour-sugg li {
+padding: 7px 12px;
+cursor: pointer;
+font-size: 13.5px;
+color: #334155;
+border-bottom: 1px solid #f1f5f9;
+}
+.pcio-harbour-sugg li:last-child { border-bottom: none; }
+.pcio-harbour-sugg li:hover { background: #eff6ff; }

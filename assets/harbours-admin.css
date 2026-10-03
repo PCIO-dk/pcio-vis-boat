@@ -1,0 +1,60 @@
+/* ================================================================
+   PCIO VIS Boat — harbours-admin.css
+   Harbours management page extras.
+   Reuses pcio-hm-* overlay/modal/map classes from harbour-map.css and
+   me-* table/modal/button/toast styles from the core members.css.
+   ================================================================ */
+
+/* ── Harbour management modal ────────────────────────────────── */
+.pcio-hm-modal-body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	min-height: 0;
+	padding: 0 16px 12px;
+}
+
+.pcio-hm-form-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 10px 12px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.pcio-hm-form-fields .me-form-row {
+	display: flex;
+	gap: 12px;
+}
+
+.pcio-hm-form-fields .me-form-group {
+	flex: 1;
+}
+
+.pcio-hm-modal-map {
+	flex: 1;
+	min-height: 0;
+}
+
+.pcio-hm-modal-footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	padding: 10px 16px;
+	border-top: 1px solid #e8e8e8;
+}
+
+/* Inline error in the modal header hint area */
+.pcio-hm-modal-error {
+	color: #dc2626;
+	font-size: .875em;
+	font-weight: 500;
+	margin: 4px 16px 0;
+}
+
+/* ── Delete confirm: boat-count message ───────────────────────── */
+.pcio-hm-delete-boats {
+	color: #dc2626;
+	font-weight: 600;
+	font-size: .95em;
+}

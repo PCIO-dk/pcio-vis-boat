@@ -1,0 +1,356 @@
+# Danish translation for PCIO VIS Boat
+# Copyright (C) 2026 PCIO
+msgid ""
+msgstr ""
+"Project-Id-Version: PCIO VIS Boat 1.0.0\n"
+"Report-Msgid-Bugs-To: https://www.pcio.dk/\n"
+"POT-Creation-Date: 2026-08-01 00:00+0200\n"
+"PO-Revision-Date: 2026-10-02 18:57+0200\n"
+"Last-Translator: PCIO <info@pcio.dk>\n"
+"Language-Team: Danish\n"
+"Language: da_DK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: pcio-vis-boat\n"
+"X-Generator: Poedit 3.9\n"
+
+msgid "PCIO VIS Boat requires the PCIO VIS Member Event plugin to be installed and active. Boat functionality is disabled."
+msgstr "PCIO VIS Båd kræver, at PCIO VIS Member Event-pluginet er installeret og aktivt. Bådsfunktionaliteten er deaktiveret."
+
+msgid "Boat not found."
+msgstr "Båd ikke fundet."
+
+msgid "An owner member ID is required."
+msgstr "Et ejer-medlems-ID er påkrævet."
+
+msgid "Could not create the boat. Please try again."
+msgstr "Kunne ikke oprette båden. Prøv venligst igen."
+
+msgid "A member ID is required."
+msgstr "Et medlems-ID er påkrævet."
+
+msgid "You do not have permission to access this page."
+msgstr "Du har ikke tilladelse til at tilgå denne side."
+
+msgid "Access denied"
+msgstr "Adgang nægtet"
+
+msgid "Boat Register"
+msgstr "Bådregister"
+
+msgid "+ New boat"
+msgstr "+ Ny båd"
+
+msgid "Boat name"
+msgstr "Bådnavn"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Model"
+msgstr "Model"
+
+msgid "Home harbour"
+msgstr "Hjemmehavn"
+
+msgid "Build year"
+msgstr "Byggeår"
+
+msgid "Sail number"
+msgstr "Sejlnummer"
+
+msgid "MMSI"
+msgstr "MMSI"
+
+msgid "Owner"
+msgstr "Ejer"
+
+msgid "Owner member #"
+msgstr "Ejer-medlems-nr."
+
+msgid "Crew / co-owners"
+msgstr "Besætning / medsejlere"
+
+msgid "Add crew member"
+msgstr "Tilføj besætningsmedlem"
+
+msgid "Member #"
+msgstr "Medlemsnummer."
+
+msgid "Subscription ID"
+msgstr "Abonnements-ID"
+
+msgid "Optional. Link to a pcio-vis-products subscription row."
+msgstr "Valgfrit. Link til en abonnementsrække i pcio-vis-products."
+
+msgid "Optional. Links to a pcio-vis-products subscription for activity tracking."
+msgstr "Valgfrit. Tilknyt et abonnement fra pcio-vis-products til aktivitetssporing."
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Expires"
+msgstr "Udløber"
+
+msgid "Notes"
+msgstr "Bemærkninger"
+
+msgid "Edit"
+msgstr "Rediger"
+
+msgid "Delete"
+msgstr "Slet"
+
+msgid "Remove"
+msgstr "Fjern"
+
+msgid "Save"
+msgstr "Gem"
+
+msgid "Cancel"
+msgstr "Annuller"
+
+msgid "Delete this boat and all its crew links?"
+msgstr "Slet denne båd og alle dens besætningslinks?"
+
+msgid "Remove this crew member?"
+msgstr "Fjern dette besætningsmedlem?"
+
+msgid "No boats registered yet."
+msgstr "Ingen både registreret endnu."
+
+msgid "No crew members linked."
+msgstr "Ingen besætningsmedlemmer tilknyttet."
+
+msgid "Save failed. Please try again."
+msgstr "Gem mislykkedes. Prøv venligst igen."
+
+msgid "Edit boat"
+msgstr "Rediger båd"
+
+msgid "New boat"
+msgstr "Ny båd"
+
+msgid "Crew"
+msgstr "Besætning"
+
+msgid "Add"
+msgstr "Tilføj"
+
+msgid "Close"
+msgstr "Luk"
+
+msgid "Member"
+msgstr "Medlem"
+
+msgid "Filter"
+msgstr "Filtrer"
+
+msgid "Showing"
+msgstr "Viser"
+
+msgid "of"
+msgstr "af"
+
+msgid "No matches."
+msgstr "Ingen resultater."
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nej"
+
+msgid "Search\\xe2\\x80\\xa6"
+msgstr "Søg\\xe2\\x80\\xa6"
+
+msgid "Manage boat register"
+msgstr "Administrer bådregister"
+
+msgid "Boat"
+msgstr "Båd"
+
+msgid "Boats"
+msgstr "Både"
+
+msgid "Browse and manage the boat register."
+msgstr "Gennemse og administrer bådregisteret."
+
+msgid "Loading\\xe2\\x80\\xa6"
+msgstr "Indlæser\\xe2\\x80\\xa6"
+
+#, php-format
+msgid "Member Event – Boat requires these plugins to be active: %s."
+msgstr "Member Event – Båd kræver, at disse plugins er aktive: %s."
+
+#. translators: label shown on the Stripe receipt
+msgid "Club membership"
+msgstr "Klubmedlemskab"
+
+msgid "Security check failed."
+msgstr "Sikkerhedstjek mislykkedes."
+
+msgid "Name is required."
+msgstr "Navn er påkrævet."
+
+msgid "A valid email address is required."
+msgstr "En gyldig e-mailadresse er påkrævet."
+
+msgid "Boat name is required."
+msgstr "Bådnavn er påkrævet."
+
+msgid "MMSI must be exactly 9 digits."
+msgstr "MMSI skal være præcis 9 cifre."
+
+msgid "A membership with that email address already exists."
+msgstr "Der eksisterer allerede et medlemskab med den e-mailadresse."
+
+msgid "The membership product is not available. Please contact the club."
+msgstr "Medlemskabsproduktet er ikke tilgængeligt. Kontakt venligst klubben."
+
+msgid "Online payment is not configured. Please contact the club."
+msgstr "Online betaling er ikke konfigureret. Kontakt venligst klubben."
+
+msgid "Could not create the order. Please try again."
+msgstr "Ordren kunne ikke oprettes. Prøv venligst igen."
+
+msgid "This field is required."
+msgstr "Dette felt er påkrævet."
+
+msgid "Please enter a valid email address."
+msgstr "Angiv venligst en gyldig e-mailadresse."
+
+msgid "Please enter a valid build year."
+msgstr "Angiv venligst et gyldigt byggeår."
+
+msgid "An error occurred. Please try again."
+msgstr "Der opstod en fejl. Prøv venligst igen."
+
+msgid "Your details"
+msgstr "Dine oplysninger"
+
+msgid "Full name"
+msgstr "Fulde navn"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Address"
+msgstr "Adresse"
+
+msgid "Boat details"
+msgstr "Bådoplysninger"
+
+msgid "Boat type"
+msgstr "Bådtype"
+
+msgid "e.g. Sailing Yacht"
+msgstr "f.eks. Sejlbåd"
+
+msgid "Boat model"
+msgstr "Bådmodel"
+
+msgid "9 digits"
+msgstr "9 cifre"
+
+msgid "* Required"
+msgstr "* Påkrævet"
+
+msgid "Continue to payment"
+msgstr "Fortsæt til betaling"
+
+msgid "[pcio_boat_signup]"
+msgstr "[pcio_boat_signup]"
+
+msgid "[pcio_boat_edit_profile]"
+msgstr "[pcio_boat_edit_profile]"
+
+msgid "Public sign-up form for new boat-club members. Collects personal details and boat information, then directs the applicant to a Stripe payment page for the club membership subscription. After successful payment the member and boat records are created automatically."
+msgstr "Offentlig tilmeldingsformular til nye bådklubbens medlemmer. Indsamler personoplysninger og båddata, og sender ansøgeren til en Stripe-betalingsside for klubmedlemskabsabonnementet. Efter vellykket betaling oprettes medlems- og bådregistreringen automatisk."
+
+msgid "Requires:"
+msgstr "Kræver:"
+
+msgid "Plugins pcio-vis-tickets and pcio-vis-products must be active. A product with"
+msgstr "Pluginsene pcio-vis-tickets og pcio-vis-products skal være aktive. Et produkt med"
+
+msgid "must exist in the shop and be set to active."
+msgstr "skal eksistere i butikken og være aktivt."
+
+msgid "Attribute"
+msgstr "Attribut"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Description"
+msgstr "Beskrivelse"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Page the visitor is sent to if they cancel at the Stripe payment step. Defaults to the site home page."
+msgstr "Siden besøgeren sendes til, hvis de annullerer ved betalingstrinnet. Standard er webstedets forside."
+
+msgid "Form fields collected"
+msgstr "Formularfelter der indsamles"
+
+msgid "Member details:"
+msgstr "Medlemsoplysninger:"
+
+msgid "Full name (required), email (required), phone, address."
+msgstr "Fulde navn (påkrævet), e-mail (påkrævet), telefon, adresse."
+
+msgid "Boat details:"
+msgstr "Bådoplysninger:"
+
+msgid "Boat name (required), home harbour, type, model, build year, sail number, MMSI (9 digits)."
+msgstr "Bådnavn (påkrævet), hjemmehavn, type, model, byggeår, sejlnummer, MMSI (9 cifre)."
+
+msgid "Examples"
+msgstr "Eksempler"
+
+msgid "boat"
+msgstr "båd"
+
+msgid "boats"
+msgstr "både"
+
+msgid "No boats registered here yet."
+msgstr "Ingen både registreret her endnu."
+
+msgid "Harbour map"
+msgstr "Havnekort"
+
+msgid "Displays an interactive map with all registered harbours. Each harbour with at least one member shows a numbered badge with the count of members that have it as their home harbour. Clicking a marker opens a popup listing the members. Harbours with no members show a small anchor icon. Provided by the PCIO VIS Boat plugin."
+msgstr "Viser et interaktivt kort med alle registrerede havne. Hver havn med mindst én båd viser et nummeret mærke med antallet af både, der har den som hjemmehavn. Klik på et markør for at åbne en liste over bådene. Havne uden både viser et lille ankersymbol. Leveret af PCIO VIS Båd-pluginet."
+
+msgid "CSS height of the map container."
+msgstr "CSS-højde på kortbeholderen."
+
+# ── Profile config injection ──────────────────────────────────────────────────
+msgid "Boat saved."
+msgstr "Båd gemt."
+
+msgid "Note"
+msgstr "Bemærkning"
+
+msgid "Boat name (required)"
+msgstr "Bådnavn (påkrævet)"
+
+msgid "Home harbour with autocomplete + Add on map (optional)"
+msgstr "Hjemhavn med autofuldførelse + Tilføj på kort (valgfrit)"
+
+msgid "Boat type, boat model, build year, sail number, MMSI (optional)"
+msgstr "Bådtype, bådmodel, byggeår, sejlnummer, MMSI (valgfrit)"
+
+msgid "Registrant's boat name"
+msgstr "Tilmelderens bådnavn"
+
+msgid "<strong>Backward-compat alias:</strong> the pcio-vis-boat plugin also registers %s as an alias that renders this same form. Existing pages using that shortcode continue to work unchanged."
+msgstr "<strong>Bagudkompatibelt alias:</strong> pcio-vis-boat-pluginnet registrerer også %s som et alias, der viser den samme formular. Eksisterende sider, der bruger den shortcode, fungerer uændret videre."

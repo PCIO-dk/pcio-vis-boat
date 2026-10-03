@@ -1,0 +1,95 @@
+/* ================================================================
+   PCIO VIS Boat — crew editor on the member profile page.
+   Styles the list rendered by boat-profile-ext.js inside the core
+   profile fieldset. Everything else reuses the core profile classes.
+   ================================================================ */
+
+.pcio-boat-profile__crew-list {
+	list-style: none;
+	margin: 12px 0;
+	padding: 0;
+	border: 1px solid #e2e8f0;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.pcio-boat-profile__crew-list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 10px 14px;
+	border-bottom: 1px solid #f1f5f9;
+	font-size: .95rem;
+}
+
+.pcio-boat-profile__crew-list li:last-child {
+	border-bottom: none;
+}
+
+.pcio-boat-profile__crew-name {
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.pcio-boat-profile__crew-no {
+	margin-left: 8px;
+	font-family: monospace;
+	font-size: .8rem;
+	color: #64748b;
+}
+
+.pcio-boat-profile__crew-you {
+	margin-left: 8px;
+	font-size: .75rem;
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	color: #64748b;
+}
+
+.pcio-boat-profile__crew-remove {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	color: #b32d2e;
+	font-size: .85rem;
+	text-decoration: underline;
+}
+
+.pcio-boat-profile__crew-remove:hover {
+	color: #8a1f21;
+}
+
+.pcio-boat-profile__crew-status {
+	min-height: 1.2em;
+	margin: 0 0 8px;
+	font-size: .85rem;
+	color: #475569;
+}
+
+.pcio-boat-profile__crew-status.is-error {
+	color: #b32d2e;
+}
+
+.pcio-boat-profile__crew-status.is-success {
+	color: #0a7c3f;
+}
+
+.pcio-boat-profile__crew-add {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 12px;
+	align-items: end;
+}
+
+.pcio-boat-profile__crew-add .pcio-boat-profile__crew-add button {
+	grid-column: 1 / -1;
+	justify-self: start;
+}
+
+@media (max-width: 600px) {
+	.pcio-boat-profile__crew-add {
+		grid-template-columns: 1fr;
+	}
+}

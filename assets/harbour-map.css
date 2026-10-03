@@ -1,0 +1,266 @@
+/* ── Shortcode map container ──────────────────────────────────── */
+.pcio-boat-harbours-map {
+	border-radius: 6px;
+	overflow: hidden;
+	z-index: 0;
+}
+
+/* Count-badge divIcon */
+.pcio-hm-badge {
+	align-items: center;
+	background: #0073aa;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	box-shadow: 0 1px 4px rgba(0,0,0,.4);
+	color: #fff;
+	display: flex;
+	font-size: 13px;
+	font-weight: 700;
+	height: 36px;
+	justify-content: center;
+	width: 36px;
+}
+
+/* Small grey anchor for empty harbours */
+.pcio-hm-anchor {
+	color: #888;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+}
+
+/* Popup member list */
+.pcio-hm-count {
+	color: #555;
+	font-size: .85em;
+	margin: 2px 0 6px;
+}
+
+.pcio-hm-list {
+	list-style: none;
+	margin: 0;
+	max-height: 180px;
+	overflow-y: auto;
+	padding: 0;
+}
+
+.pcio-hm-list li {
+	border-bottom: 1px solid #f0f0f0;
+	font-size: .9em;
+	padding: 3px 0;
+}
+
+.pcio-hm-list li:last-child {
+	border-bottom: none;
+}
+
+.pcio-hm-num {
+	color: #888;
+	font-size: .85em;
+}
+
+/* ── Harbour picker ───────────────────────────────────────────── */
+.pcio-boat-signup__harbour-picker {
+	position: relative;
+}
+
+.pcio-boat-signup__harbour-suggestions {
+	background: #fff;
+	border: 1px solid #bbb;
+	border-radius: 0 0 4px 4px;
+	border-top: none;
+	box-shadow: 0 4px 8px rgba(0,0,0,.1);
+	left: 0;
+	list-style: none;
+	margin: 0;
+	max-height: 220px;
+	overflow-y: auto;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 100;
+}
+
+.pcio-boat-signup__harbour-suggestions li {
+	cursor: pointer;
+	font-size: .95em;
+	list-style: none;
+	padding: .5em .75em;
+}
+
+.pcio-boat-signup__harbour-suggestions li:hover,
+.pcio-boat-signup__harbour-suggestions li.is-highlighted {
+	background: #0073aa;
+	color: #fff;
+}
+
+.pcio-boat-signup__harbour-add-btn {
+	background: none;
+	border: none;
+	color: #0073aa;
+	cursor: pointer;
+	font-size: .85em;
+	margin-top: .35em;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.pcio-boat-signup__harbour-add-btn:hover {
+	color: #005f8e;
+}
+
+.pcio-boat-signup__harbour-hint {
+	margin: .35em 0 0;
+	font-size: .8em;
+	color: #64748b;
+}
+
+/* The same picker markup is reused on the member profile form. */
+.pcio-boat-profile__harbour-picker {
+	position: relative;
+}
+
+.pcio-boat-profile__harbour-suggestions {
+	background: #fff;
+	border: 1px solid #bbb;
+	border-radius: 0 0 4px 4px;
+	border-top: none;
+	box-shadow: 0 4px 8px rgba(0,0,0,.1);
+	left: 0;
+	list-style: none;
+	margin: 0;
+	max-height: 220px;
+	overflow-y: auto;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 100;
+}
+
+.pcio-boat-profile__harbour-suggestions li {
+	cursor: pointer;
+	font-size: .95em;
+	list-style: none;
+	padding: .5em .75em;
+}
+
+.pcio-boat-profile__harbour-suggestions li:hover,
+.pcio-boat-profile__harbour-suggestions li.is-highlighted {
+	background: #0073aa;
+	color: #fff;
+}
+
+.pcio-boat-profile__harbour-add-btn {
+	background: none;
+	border: none;
+	color: #0073aa;
+	cursor: pointer;
+	font-size: .85em;
+	margin-top: .35em;
+	padding: 0;
+	text-decoration: underline;
+}
+
+.pcio-boat-profile__harbour-add-btn:hover {
+	color: #005f8e;
+}
+
+.pcio-boat-profile__harbour-hint {
+	margin: .35em 0 0;
+	font-size: .8em;
+	color: #64748b;
+}
+
+/* ── Add-on-map modal ─────────────────────────────────────────── */
+.pcio-hm-overlay {
+	align-items: center;
+	background: rgba(0,0,0,.55);
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+}
+
+.pcio-hm-modal {
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 8px 32px rgba(0,0,0,.3);
+	display: flex;
+	flex-direction: column;
+	height: 85vh;
+	max-height: 700px;
+	max-width: 860px;
+	overflow: hidden;
+	width: 92vw;
+}
+
+.pcio-hm-modal-header {
+	align-items: center;
+	border-bottom: 1px solid #e8e8e8;
+	display: flex;
+	justify-content: space-between;
+	padding: .75em 1em;
+}
+
+.pcio-hm-modal-header h3 {
+	font-size: 1.1em;
+	margin: 0;
+}
+
+.pcio-hm-modal-close {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.4em;
+	line-height: 1;
+	padding: .1em .3em;
+}
+
+.pcio-hm-modal-hint {
+	color: #555;
+	font-size: .9em;
+	margin: .5em 1em .25em;
+}
+
+.pcio-hm-modal-map {
+	flex: 1;
+	min-height: 0;
+}
+
+.pcio-hm-name-form {
+	align-items: center;
+	border-top: 1px solid #e8e8e8;
+	display: flex;
+	gap: .75em;
+	padding: .75em 1em;
+}
+
+.pcio-hm-name-form input[type="text"] {
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	flex: 1;
+	font-size: 1em;
+	padding: .45em .7em;
+}
+
+.pcio-hm-name-form button {
+	background: #0073aa;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	font-size: .95em;
+	padding: .5em 1.1em;
+	white-space: nowrap;
+}
+
+.pcio-hm-name-form button:disabled {
+	cursor: not-allowed;
+	opacity: .6;
+}
