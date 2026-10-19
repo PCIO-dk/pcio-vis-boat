@@ -26,6 +26,76 @@ class PCIO_VIS_Boat_DB {
 		return $wpdb->prefix . self::TABLE_BOATS;
 	}
 
+	/**
+	 * Register boat tables with the core history service.
+	 *
+	 * @param array<string,array> $tables Existing history table definitions.
+	 * @return array<string,array>
+	 */
+	public static function history_tables( array $tables ): array {
+		$tables['boat_boats'] = [
+			'table'     => self::TABLE_BOATS,
+			'label'     => __( 'Boat', 'pcio-vis-boat' ),
+			'title'     => [ self::class, 'history_title' ],
+			'weight'    => 6,
+			'large'     => [ 'note' ],
+			'ignore'    => [ 'created', 'updated' ],
+			'fields'    => [
+				'harbour_id'    => __( 'Home harbour', 'pcio-vis-boat' ),
+				'boat_name'     => __( 'Boat name', 'pcio-vis-boat' ),
+				'boat_type'     => __( 'Boat type', 'pcio-vis-boat' ),
+				'boat_model'    => __( 'Boat model', 'pcio-vis-boat' ),
+				'build_year'    => __( 'Build year', 'pcio-vis-boat' ),
+				'sail_id'       => __( 'Sail number', 'pcio-vis-boat' ),
+				'mmsi'          => __( 'MMSI', 'pcio-vis-boat' ),
+				'member_number' => __( 'Member number', 'pcio-vis-boat' ),
+				'note'          => __( 'Note', 'pcio-vis-boat' ),
+			],
+			'links'     => [ self::class, 'history_links' ],
+		];
+
+		return $tables;
+	}
+
+	/**
+	 * Row title for boat history entries.
+	 *
+	 * @param array<string,mixed> $row Boat row.
+	 */
+	public static function history_title( array $row ): string {
+		$name = trim( (string) ( $row['boat_name'] ?? '' ) );
+		if ( '' !== $name ) {
+			return $name;
+		}
+
+		$sail_id = trim( (string) ( $row['sail_id'] ?? '' ) );
+		if ( '' !== $sail_id ) {
+			return $sail_id;
+		}
+
+		return '#' . (int) ( $row['id'] ?? 0 );
+	}
+
+	/**
+	 * Link a boat row to the first core member sharing its member number.
+	 *
+	 * @param array<string,mixed> $row Boat row.
+	 * @return array{member_id?:int}
+	 */
+	public static function history_links( array $row ): array {
+		$member_number = (int) ( $row['member_number'] ?? 0 );
+		if ( $member_number <= 0 || ! class_exists( 'PCIO_VIS_DB' ) ) {
+			return [];
+		}
+
+		$member_ids = array_map( 'intval', PCIO_VIS_DB::get_member_ids_by_member_number( $member_number ) ?: [] );
+		if ( [] === $member_ids ) {
+			return [];
+		}
+
+		return [ 'member_id' => min( $member_ids ) ];
+	}
+
 	// ── Schema ────────────────────────────────────────────────────
 
 	/**
@@ -463,19 +533,18 @@ class PCIO_VIS_Boat_DB {
 		global $wpdb;
 		$clean = self::sanitize_boat( $data );
 		$clean['member_number'] = $member_number;
-		$wpdb->insert( self::t_boats(), $clean, self::boat_formats( $clean ) );
-		return $wpdb->insert_id ? (int) $wpdb->insert_id : false;
+		$result = PCIO_VIS_History::insert( 'boat_boats', $clean, self::boat_formats( $clean ) );
+		return $result ? (int) $wpdb->insert_id : false;
 	}
 
 	public static function update_boat( int $id, array $data ): bool {
-		global $wpdb;
 		$clean = self::sanitize_boat( $data );
 		if ( ! $clean ) {
 			return false;
 		}
 		$clean['updated'] = current_time( 'mysql' );
-		return false !== $wpdb->update(
-			self::t_boats(),
+		return false !== PCIO_VIS_History::update(
+			'boat_boats',
 			$clean,
 			[ 'id' => $id ],
 			self::boat_formats( $clean ),
@@ -490,12 +559,11 @@ class PCIO_VIS_Boat_DB {
 	 * `member_number`; this re-keys such a row onto the member's real number.
 	 */
 	public static function rekey_boat( int $id, int $member_number ): bool {
-		global $wpdb;
 		if ( $id <= 0 || $member_number <= 0 ) {
 			return false;
 		}
-		return false !== $wpdb->update(
-			self::t_boats(),
+		return false !== PCIO_VIS_History::update(
+			'boat_boats',
 			[
 				'member_number' => $member_number,
 				'updated'       => current_time( 'mysql' ),
@@ -563,8 +631,7 @@ class PCIO_VIS_Boat_DB {
 	 * core members table, so there is no separate crew link to clean up.
 	 */
 	public static function delete_boat( int $id ): bool {
-		global $wpdb;
-		return false !== $wpdb->delete( self::t_boats(), [ 'id' => $id ], [ '%d' ] );
+		return false !== PCIO_VIS_History::delete( 'boat_boats', [ 'id' => $id ], [ '%d' ] );
 	}
 
 	/**

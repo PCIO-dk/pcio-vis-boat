@@ -22,6 +22,28 @@ class PCIO_VIS_Boat_Harbours_DB {
 		return self::t();
 	}
 
+	/**
+	 * Register harbour tables with the core history service.
+	 *
+	 * @param array<string,array> $tables Existing history table definitions.
+	 * @return array<string,array>
+	 */
+	public static function history_tables( array $tables ): array {
+		$tables['boat_harbours'] = [
+			'table'     => self::TABLE,
+			'label'     => __( 'Harbour', 'pcio-vis-boat' ),
+			'title_col' => 'name',
+			'weight'    => 6,
+			'fields'    => [
+				'name' => __( 'Name', 'pcio-vis-boat' ),
+				'lat'  => __( 'Latitude', 'pcio-vis-boat' ),
+				'lon'  => __( 'Longitude', 'pcio-vis-boat' ),
+			],
+		];
+
+		return $tables;
+	}
+
 	public static function install(): void {
 		global $wpdb;
 
@@ -190,8 +212,8 @@ class PCIO_VIS_Boat_Harbours_DB {
 	/** Insert a new harbour and return its id. */
 	public static function create( string $name, float $lat, float $lon ): int {
 		global $wpdb;
-		$wpdb->insert(
-			self::t(),
+		PCIO_VIS_History::insert(
+			'boat_harbours',
 			[
 				'name' => substr( sanitize_text_field( $name ), 0, 128 ),
 				'lat'  => $lat,
@@ -248,9 +270,8 @@ class PCIO_VIS_Boat_Harbours_DB {
 	 * Update a harbour's name and coordinates.
 	 */
 	public static function update( int $id, string $name, float $lat, float $lon ): bool {
-		global $wpdb;
-		return false !== $wpdb->update(
-			self::t(),
+		return false !== PCIO_VIS_History::update(
+			'boat_harbours',
 			[
 				'name' => substr( sanitize_text_field( $name ), 0, 128 ),
 				'lat'  => $lat,
@@ -266,9 +287,8 @@ class PCIO_VIS_Boat_Harbours_DB {
 	 * Delete a harbour. Returns false when no row was affected.
 	 */
 	public static function delete( int $id ): bool {
-		global $wpdb;
-		return false !== $wpdb->delete( self::t(), [ 'id' => $id ], [ '%d' ] )
-			&& $wpdb->rows_affected > 0;
+		$result = PCIO_VIS_History::delete( 'boat_harbours', [ 'id' => $id ], [ '%d' ] );
+		return false !== $result && $result > 0;
 	}
 
 	/**

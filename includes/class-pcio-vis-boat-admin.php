@@ -53,7 +53,7 @@ class PCIO_VIS_Boat_Admin {
 				'pcio-me-app',
 				plugins_url( 'assets/members.css', PCIO_VIS_PLUGIN_FILE ),
 				[],
-				defined( 'PCIO_VIS_VERSION' ) ? PCIO_VIS_VERSION : PCIO_VIS_BOAT_VERSION
+				'1.4.0'
 			);
 		}
 
@@ -67,8 +67,8 @@ class PCIO_VIS_Boat_Admin {
 		wp_enqueue_script(
 			'pcio-me-boat-admin',
 			plugins_url( 'assets/boat-admin.js', PCIO_VIS_BOAT_FILE ),
-			[],
-			PCIO_VIS_BOAT_VERSION,
+			[ 'pcio-vis-modal-guard' ],
+			PCIO_VIS_BOAT_VERSION . '.1',
 			true
 		);
 

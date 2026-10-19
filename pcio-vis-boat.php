@@ -3,7 +3,7 @@
 Plugin Name:  PCIO VIS Boat
 Plugin URI:   https://www.pcio.dk/
 Description:  Extends PCIO VIS Member Event with a boat club register: boats owned by a membership number with everyone on that number as crew, a member self-service boat profile, and Boat Register and Harbours admin pages. Fields: home harbour, boat name, type, model, build year, sail number and MMSI.
-Version:      1.1.1
+Version:      1.2.0
 Author:       PCIO
 Author URI:   https://www.pcio.dk
 Requires at least: 6.2
@@ -51,6 +51,8 @@ class PCIO_VIS_Boat_Plugin {
 	public static function register(): void {
 		add_action( 'admin_init',    [ 'PCIO_VIS_Boat_DB', 'install' ] );
 		add_action( 'rest_api_init', [ __CLASS__, 'register_rest' ] );
+		add_filter( 'pcio_me_history_tables', [ 'PCIO_VIS_Boat_DB', 'history_tables' ] );
+		add_filter( 'pcio_me_history_tables', [ 'PCIO_VIS_Boat_Harbours_DB', 'history_tables' ] );
 
 		( new PCIO_VIS_Boat_Admin() )->register();
 		( new PCIO_VIS_Boat_Harbours_Admin() )->register();

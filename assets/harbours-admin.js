@@ -142,12 +142,11 @@
 		document.getElementById( 'hm-del-cancel' ).addEventListener( 'click', closeDeleteModal );
 		document.getElementById( 'hm-del-confirm').addEventListener( 'click', doDelete );
 
-		// Backdrop click to close
-		[ 'hm-overlay', 'hm-del-overlay' ].forEach( function ( id ) {
+		// Confirmation dialogs may be dismissed by clicking their backdrop.
+		[ 'hm-del-overlay' ].forEach( function ( id ) {
 			document.getElementById( id )?.addEventListener( 'click', function ( e ) {
 				if ( e.target === e.currentTarget ) {
-					if ( id === 'hm-overlay' ) { closeModal(); }
-					else { closeDeleteModal(); }
+					closeDeleteModal();
 				}
 			} );
 		} );
@@ -259,13 +258,16 @@
 
 		show( 'hm-overlay' );
 		initMap( harbour, lat, lon );
+		PCIOVisModal.open( 'hm-overlay', closeModal );
 		setTimeout( function () { document.getElementById( 'hm-name' )?.focus(); }, 40 );
 	}
 
-	function closeModal() {
+	function closeModal( saved = false ) {
+		if ( ! PCIOVisModal.close( 'hm-overlay', saved ) ) { return false; }
 		hide( 'hm-overlay' );
 		editId = null;
 		destroyMap();
+		return true;
 	}
 
 	function initMap( harbour, lat, lon ) {
@@ -372,7 +374,7 @@
 
 		apiFetch( url, method, payload )
 			.then( function () {
-				closeModal();
+				closeModal( true );
 				loadHarbours();
 				toast( '\u2713', 'success' );
 			} )
@@ -408,7 +410,7 @@
 				? ( T.moveBoats || 'Move the boats to another harbour first.' ) + ' (' + harbour.boat_count + ' ' + ( harbour.boat_count === 1 ? ( T.boat || 'boat' ) : ( T.boats || 'boats' ) ) + ')'
 				: '';
 		}
-		closeModal();
+		if ( ! closeModal() ) { return; }
 		show( 'hm-del-overlay' );
 	}
 

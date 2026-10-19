@@ -237,12 +237,10 @@
 		document.getElementById( 'me-crew-add'       ).addEventListener( 'click', addCrew );
 
 		// Backdrop click
-		[ 'me-boat-overlay', 'me-boat-del-overlay', 'me-crew-overlay' ].forEach( id => {
+		[ 'me-boat-del-overlay' ].forEach( id => {
 			document.getElementById( id )?.addEventListener( 'click', e => {
 				if ( e.target !== e.currentTarget ) return;
-				if ( id === 'me-boat-overlay'     ) closeBoatModal();
-				else if ( id === 'me-boat-del-overlay' ) closeDeleteModal();
-				else closeCrewModal();
+				closeDeleteModal();
 			} );
 		} );
 
@@ -384,7 +382,13 @@
 		} );
 
 		input.addEventListener( 'blur',    () => setTimeout( hideSugg, 150 ) );
-		input.addEventListener( 'keydown', e => { if ( e.key === 'Escape' ) { hideSugg(); } } );
+		input.addEventListener( 'keydown', e => {
+			if ( e.key === 'Escape' && sugg.style.display !== 'none' ) {
+				hideSugg();
+				e.preventDefault();
+				e.stopPropagation();
+			}
+		} );
 
 		function hideSugg() { sugg.style.display = 'none'; sugg.innerHTML = ''; }
 	}
@@ -494,10 +498,16 @@
 		setF( 'f-boat-note',    boat?.note               ?? '' );
 		document.getElementById( 'me-boat-delete' ).classList.toggle( 'me-hidden', ! id );
 		show( 'me-boat-overlay' );
+		PCIOVisModal.open( 'me-boat-overlay', closeBoatModal );
 		setTimeout( () => document.getElementById( 'f-boat-name' )?.focus(), 40 );
 	}
 
-	function closeBoatModal() { hide( 'me-boat-overlay' ); editId = null; }
+	function closeBoatModal( saved = false ) {
+		if ( ! PCIOVisModal.close( 'me-boat-overlay', saved ) ) return false;
+		hide( 'me-boat-overlay' );
+		editId = null;
+		return true;
+	}
 
 	async function saveBoat() {
 		const name    = getF( 'f-boat-name' ).trim();
@@ -525,7 +535,7 @@
 			editId
 				? await apiFetch( REST + '/boats/' + editId, 'PUT',  payload )
 				: await apiFetch( REST + '/boats',           'POST', payload );
-			closeBoatModal();
+			closeBoatModal( true );
 			await loadBoats();
 			toast( '\u2713', 'success' );
 		} catch ( err ) {
@@ -542,7 +552,7 @@
 		const boat  = allBoats.find( b => b.id === id );
 		const nameEl = document.getElementById( 'me-boat-del-name' );
 		if ( nameEl ) { nameEl.textContent = boat?.boat_name || ''; }
-		closeBoatModal();
+		if ( ! closeBoatModal() ) return;
 		show( 'me-boat-del-overlay' );
 	}
 
@@ -574,11 +584,16 @@
 		setF( 'f-crew-member-id', '' );
 		setF( 'f-crew-sub-id',    '0' );
 		show( 'me-crew-overlay' );
+		PCIOVisModal.open( 'me-crew-overlay', closeCrewModal );
 		await loadCrew();
 		document.getElementById( 'f-crew-member-id' )?.focus();
 	}
 
-	function closeCrewModal() { hide( 'me-crew-overlay' ); crewBoatId = null; }
+	function closeCrewModal( saved = false ) {
+		if ( ! PCIOVisModal.close( 'me-crew-overlay', saved ) ) return;
+		hide( 'me-crew-overlay' );
+		crewBoatId = null;
+	}
 
 	async function loadCrew() {
 		const wrap = document.getElementById( 'me-crew-list' );
@@ -692,4 +707,3 @@
 	}
 
 } )();
-

@@ -71,7 +71,7 @@ class PCIO_VIS_Boat_Harbours_Admin {
 				'pcio-me-app',
 				plugins_url( 'assets/members.css', PCIO_VIS_PLUGIN_FILE ),
 				[],
-				defined( 'PCIO_VIS_VERSION' ) ? PCIO_VIS_VERSION : PCIO_VIS_BOAT_VERSION
+				'1.4.0'
 			);
 		}
 
@@ -97,8 +97,8 @@ class PCIO_VIS_Boat_Harbours_Admin {
 		wp_enqueue_script(
 			'pcio-vis-boat-harbours-admin',
 			plugins_url( 'assets/harbours-admin.js', PCIO_VIS_BOAT_FILE ),
-			[ 'leaflet' ],
-			PCIO_VIS_BOAT_VERSION,
+			[ 'leaflet', 'pcio-vis-modal-guard' ],
+			PCIO_VIS_BOAT_VERSION . '.1',
 			true
 		);
 

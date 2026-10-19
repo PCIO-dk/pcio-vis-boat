@@ -89,8 +89,8 @@ class PCIO_VIS_Boat_Harbours_Map {
 		wp_enqueue_script(
 			'pcio-vis-boat-harbour-map',
 			PCIO_VIS_BOAT_URL . 'assets/harbour-map.js',
-			[ 'leaflet' ],
-			PCIO_VIS_BOAT_VERSION,
+			[ 'leaflet', 'pcio-vis-modal-guard' ],
+			PCIO_VIS_BOAT_VERSION . '.1',
 			true
 		);
 	}

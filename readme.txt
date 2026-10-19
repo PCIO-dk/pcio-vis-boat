@@ -3,7 +3,7 @@ Contributors: pcio
 Tags: members, boats, club, nautical
 Requires at least: 6.2
 Tested up to: 7.1
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 Requires PHP: 8.1
 Requires Plugins: pcio-vis-member-event
 License: GPLv2 or later
@@ -95,9 +95,18 @@ Boat records are migrated automatically. The owner column becomes the membership
 2. Map showing members home habour
 3. Advanced member statistics and sponsor activity (number of link clicks)
 
+
+== Upgrade Notice ==
+
+= 1.2.0 =
+Requires PCIO VIS Member Event 1.6 or later.
+
 == Changelog ==
 
-= 1.1 =
+= 1.2.0 =
+* Added: **Change history with undo** — all writes to Vis tables are logged in the new `me_change_history` table, with undo data in `me_change_undo`. A new **Vis → History** admin page lists every change with filters and an Undo button, guarded by the new `vis_undo_changes` capability (granted to System Admin).
+
+= 1.1.0 =
 * Added: **Member boat profile.** Signed-in members can now edit their own boat
   and manage their crew directly on the core member profile page, with no
   administrator involved. New "Boat details" and "Crew" sections appear there,

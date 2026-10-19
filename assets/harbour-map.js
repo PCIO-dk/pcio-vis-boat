@@ -284,9 +284,7 @@
 		} );
 
 		modal.querySelector( '.pcio-hm-modal-close' ).addEventListener( 'click', closeModal );
-		overlay.addEventListener( 'click', function ( e ) {
-			if ( e.target === overlay ) { closeModal(); }
-		} );
+		PCIOVisModal.open( overlay, closeModal, function () { return [ chosenLat, chosenLon ]; } );
 
 		document.getElementById( 'pcio-hm-save-btn' ).addEventListener( 'click', function () {
 			var name = document.getElementById( 'pcio-hm-name-input' ).value.trim();
@@ -295,10 +293,11 @@
 			// Do not persist yet — hand the harbour to the sign-up form. It is
 			// created server-side after membership is confirmed.
 			saveNewHarbour( name, chosenLat, chosenLon );
-			closeModal();
+			closeModal( true );
 		} );
 
-		function closeModal() {
+		function closeModal( saved ) {
+			if ( ! PCIOVisModal.close( overlay, saved ) ) { return; }
 			modalMap.remove();
 			overlay.remove();
 		}
